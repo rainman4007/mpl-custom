@@ -1,1 +1,1 @@
-echo 'No tests provided'
+MPLModule('Test Echo', CFG)
