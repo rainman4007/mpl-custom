@@ -3,7 +3,8 @@ def call(body){
 	def MPL = MPLPipelineConfig(body, [
     agent_label: '',
     modules: [
-      Echo: [:]
+      Echo: [:],
+      Test: [:]
       ]
     ])
 
@@ -18,6 +19,12 @@ def call(body){
 		  		MPLModule()
 		  	}
 		  }
+      stage('Test'){
+        when { expression { MPLModuleEnabled() } }
+        steps {
+          MPLModule()
+        }
+      }
 		}
 	post {
       always {
