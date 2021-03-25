@@ -34,7 +34,7 @@ import com.triv.devops.mpl.Helper
  *
  * @author Sergei Parshev <sparshev@griddynamics.com>
  */
-class MPLManagerBackup implements Serializable {
+class MPLManager implements Serializable {
   /**
    * Simple realization of a singleton
    */
