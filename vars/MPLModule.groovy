@@ -65,6 +65,9 @@ def call(String name = env.STAGE_NAME, Map cfg = null) {
   if( ! module_src )
     throw new MPLModuleException("Unable to find not active module to execute: ${(active_modules).join(' --> ')} -X> ${module_path}")
 
+  // OUT will be return to caller
+    def out = MPLManager.instance.moduleConfig(name)
+
   try {
     MPLManager.instance.pushActiveModule(module_path)
     Helper.runModule(module_src, module_path, [CFG: Helper.flatten(cfg), OUT: out])
@@ -86,4 +89,5 @@ def call(String name = env.STAGE_NAME, Map cfg = null) {
     }
     MPLManager.instance.popActiveModule()
   }
+    return out
 }
