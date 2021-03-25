@@ -47,7 +47,7 @@ class MPLManager implements Serializable {
   }
 
   /** List of paths which is used to find modules in libraries */
-  private List modulesLoadPaths = ['com/griddynamics/devops/mpl']
+  private List modulesLoadPaths = ['com/griddynamics/devops/mpl','com/triv/devops/mpl']
 
   /** Pipeline configuration */
   private Map config = [:]
