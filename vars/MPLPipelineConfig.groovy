@@ -22,7 +22,7 @@
 //
 
 import com.griddynamics.devops.mpl.Helper
-import com.triv.devops.mpl.MPLManager
+import com.griddynamics.devops.mpl.MPLManager
 import com.griddynamics.devops.mpl.MPLException
 
 /**

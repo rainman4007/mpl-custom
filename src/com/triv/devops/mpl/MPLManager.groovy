@@ -41,11 +41,11 @@ class MPLManager implements Serializable {
    */
   private static inst = null
 
-  // public static getInstance() {
-  //   if( ! inst )
-  //     inst = new MPLManager()
-  //   return inst
-  // }
+  public static getInstance() {
+    if( ! inst )
+      inst = new MPLManager()
+    return inst
+  }
 
   /** List of paths which is used to find modules in libraries */
   private List modulesLoadPaths = ['com/triv/devops/mpl']
