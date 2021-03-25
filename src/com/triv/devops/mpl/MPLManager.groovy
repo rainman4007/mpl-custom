@@ -34,7 +34,7 @@ import com.triv.devops.mpl.Helper
  *
  * @author Sergei Parshev <sparshev@griddynamics.com>
  */
-class MPLManager implements Serializable {
+class MPLManagerBackup implements Serializable {
   /**
    * Simple realization of a singleton
    */
@@ -47,7 +47,7 @@ class MPLManager implements Serializable {
   }
 
   /** List of paths which is used to find modules in libraries */
-  private List modulesLoadPaths = ['com/triv/devops/mpl']
+  private List modulesLoadPaths = ['com/griddynamics/devops/mpl']
 
   /** Pipeline configuration */
   private Map config = [:]
