@@ -306,10 +306,12 @@ class MPLManager implements Serializable {
    *
    * @return  String the created block id
    */
-  public String pushActiveModule(String path) {
-    return Helper.startMPLBlock(path)
-  }
-
+  // public String pushActiveModule(String path) {
+  //   return Helper.startMPLBlock(path)
+  // }
+   public pushActiveModule(String path) {
+    activeModules += path
+   }
   /**
    * Removing the latest active module from the list
    *
