@@ -31,5 +31,6 @@ import com.triv.devops.mpl.MPLManager
  * @return  Boolean module enabled or not
  */
 def call(String name = env.STAGE_NAME) {
+  print("Name in var file "+ name)
   MPLManager.instance.moduleEnabled(name)
 }
