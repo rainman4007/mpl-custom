@@ -21,7 +21,7 @@
 // @Description: Shared Jenkins Modular Pipeline Library
 //
 
-package com.griddynamics.devops.mpl
+package com.triv.devops.mpl
 
 import java.nio.file.Paths
 
