@@ -125,7 +125,7 @@ class MPLManager implements Serializable {
    */
   public Boolean moduleEnabled(String name) {
     print("name "+ name)
-    config.modules ? config.modules[name] != null : false
+    config.modules ? config.modules[name] == null : false
   }
 
   /**
