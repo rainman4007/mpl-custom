@@ -120,6 +120,7 @@ class MPLManager implements Serializable {
    * @return  Boolean about existing the module
    */
   public Boolean moduleEnabled(String name) {
+    print("name "+ name)
     config.modules ? config.modules[name] != null : false
   }
 
