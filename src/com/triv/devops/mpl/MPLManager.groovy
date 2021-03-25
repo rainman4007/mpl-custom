@@ -315,10 +315,12 @@ class MPLManager implements Serializable {
    *
    * @param start_id  start node ID to find in the current execution
    */
-  public void popActiveModule(String start_id) {
-    Helper.endMPLBlock(start_id)
+  // public void popActiveModule(String start_id) {
+  //   Helper.endMPLBlock(start_id)
+  // }
+  public popActiveModule() {
+    activeModules.pop()
   }
-
   /**
    * Restore the static object state if the pipeline was interrupted
    *
