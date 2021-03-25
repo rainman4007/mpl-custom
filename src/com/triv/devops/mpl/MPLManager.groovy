@@ -289,14 +289,16 @@ class MPLManager implements Serializable {
    *               better to switch to Helper.getMPLBlocks() - it gives more
    *               info about the currently executed modules
    */
-  @Deprecated // https://github.com/griddynamics/mpl/issues/54
-  public List getActiveModules() {
-    def blocks = Helper.getMPLBlocks()
-    for( def i = 0; i < blocks.size(); i++ )
-      blocks[i] = blocks[i].module
-    return blocks.reverse()
+  // @Deprecated // https://github.com/griddynamics/mpl/issues/54
+  // public List getActiveModules() {
+  //   def blocks = Helper.getMPLBlocks()
+  //   for( def i = 0; i < blocks.size(); i++ )
+  //     blocks[i] = blocks[i].module
+  //   return blocks.reverse()
+  // }
+  public getActiveModules() {
+    activeModules
   }
-
   /**
    * Add active module to the stack-list
    *
