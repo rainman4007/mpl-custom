@@ -16,13 +16,13 @@ def call(body){
 		  stage('Echo'){
 		  	when { expression { MPLModuleEnabled() } }
 		  	steps {
-		  		MPLModule()
+		  		MPLModule('Echo', MPL.config)
 		  	}
 		  }
       stage('Test'){
         when { expression { MPLModuleEnabled() } }
         steps {
-          MPLModule()
+          MPLModule('Test', MPL.config)
         }
       }
 		}
