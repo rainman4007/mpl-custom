@@ -34,7 +34,6 @@ import com.griddynamics.devops.mpl.Helper
  *
  * @author Sergei Parshev <sparshev@griddynamics.com>
  */
-@Singleton
 class MPLManager implements Serializable {
   /**
    * Simple realization of a singleton
