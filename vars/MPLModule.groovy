@@ -21,7 +21,7 @@
 // @Description: Shared Jenkins Modular Pipeline Library
 //
 
-import com.griddynamics.devops.mpl.Helper
+import com.triv.devops.mpl.Helper
 import com.triv.devops.mpl.MPLManager
 import com.griddynamics.devops.mpl.MPLModuleException
 
@@ -67,7 +67,7 @@ def call(String name = env.STAGE_NAME, Map cfg = null) {
 
   try {
     MPLManager.instance.pushActiveModule(module_path)
-    Helper.runModule(module_src, module_path, [CFG: Helper.flatten(cfg)])
+    Helper.runModule(module_src, module_path, [CFG: Helper.flatten(cfg), OUT: out])
   }
   catch( ex ) {
     def newex = new MPLModuleException("Found error during execution of the module '${module_path}':\n${ex}")

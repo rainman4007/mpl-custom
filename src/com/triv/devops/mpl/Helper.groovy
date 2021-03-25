@@ -21,7 +21,7 @@
 // @Description: Shared Jenkins Modular Pipeline Library
 //
 
-package com.triv.devops.mpl
+package com.griddynamics.devops.mpl
 
 import java.nio.file.Paths
 
@@ -112,6 +112,19 @@ abstract class Helper {
         }
         base
     }
+
+    /**
+   * Converts map to a simply flatten map
+   *
+   * @param data       map to flatten
+   * @param separator  keys separator
+   * @return  map with flatten keys
+   */
+  static Map flatten(Map data, String separator = '.') {
+    data.collectEntries { k, v ->
+      v instanceof Map ? flatten(v, separator).collectEntries { q, r -> [(k + separator + q): r] } : [(k):v]
+    }
+  }
 
     /**
      * Deep copy of the Map or List
