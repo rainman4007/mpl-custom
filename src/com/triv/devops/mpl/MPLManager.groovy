@@ -43,7 +43,7 @@ class MPLManager implements Serializable {
 
   public static getInstance() {
     if( ! inst )
-      inst = new MPLManager()
+      inst = new MPLManager.instance
     return inst
   }
 
