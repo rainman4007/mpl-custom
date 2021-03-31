@@ -1,5 +1,5 @@
 def call(body) {
-  library('mpl')
+  library('grid-mpl')
   MPLModulesPath('com/triv/devops/mpl')
 
   def MPL = MPLPipelineConfig(body, [
