@@ -1,3 +1,7 @@
+MPLPostStep('always') {
+ print("Post step from Echo module")
+}
+
 print("CFG from Echo "+ CFG)
 def version = MPLModule('Test Echo', CFG).'artifact.version'
 echo "${version}"
