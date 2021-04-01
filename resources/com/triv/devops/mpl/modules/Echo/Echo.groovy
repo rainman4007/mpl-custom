@@ -1,5 +1,5 @@
 MPLPostStep('always') {
- print("Post step from Echo module")
+ print("Post step from Echo module "+ CFG)
 }
 
 print("CFG from Echo "+ CFG)
